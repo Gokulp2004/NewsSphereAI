@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f7fb;
+  --bg-accent: #e8edf6;
+  --text: #0c1117;
+  --muted: #607186;
+  --card: rgba(255, 255, 255, 0.75);
+  --border: rgba(15, 23, 42, 0.1);
+}
+
+.dark {
+  --bg: #0b1119;
+  --bg-accent: #111926;
+  --text: #e7eef6;
+  --muted: #a1b0c3;
+  --card: rgba(17, 25, 38, 0.6);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  background-image: radial-gradient(circle at 20% 20%, rgba(113, 208, 201, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 0%, rgba(255, 122, 110, 0.35), transparent 45%),
+    radial-gradient(circle at 20% 80%, rgba(124, 92, 255, 0.15), transparent 45%);
+  background-attachment: fixed;
+}
+
+.glass-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.gradient-line {
+  background: linear-gradient(90deg, rgba(113, 208, 201, 0.6), rgba(255, 122, 110, 0.6));
+}
